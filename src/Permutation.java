@@ -40,37 +40,37 @@ public class Permutation {
             return;
         }
 
-        char[] arr = mWord.toCharArray();
         mPermutation = new String[mFactorialResult];
 
         for (int i = 0; i < mPermutation.length; i++) {
             mPermutation[i] = "";
         }
 
+        int length = mWord.length();
         int factor = mFactorialResult;
-        for (int i = 0; i < arr.length; i++) {
-            if (arr.length - i <= 0) {
+        for (int i = 0; i < length; i++) {
+            if (length - i <= 0) {
                 factor = 0;
             } else {
-                factor /= (arr.length - i);
+                factor /= (length - i);
             }
 
             for (int j = 0, k = i; j < mFactorialResult; j++) {
-                if (factor == 0 || (j != 0 && j % factor == 0) || mPermutation[j].contains(arr[k] + "")) {
+                if (factor == 0 || (j != 0 && j % factor == 0) || mPermutation[j].contains(mWord.charAt(k) + "")) {
                     k++;
-                    if (k >= arr.length) {
+                    if (k >= length) {
                         k = 0;
                     }
 
-                    while (mPermutation[j].contains(arr[k] + "")) {
+                    while (mPermutation[j].contains(mWord.charAt(k) + "")) {
                         k++;
-                        if (k >= arr.length) {
+                        if (k >= length) {
                             k = 0;
                         }
                     }
                 }
 
-                mPermutation[j] = mPermutation[j] + arr[k];
+                mPermutation[j] = mPermutation[j] + mWord.charAt(k);
             }
         }
     }

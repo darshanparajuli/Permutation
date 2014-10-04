@@ -97,7 +97,7 @@ public class Permutation {
         }
         String format = "%" + digitCount + "d";
         for (int i = 0; i < mPermutation.length; i++) {
-            System.out.printf(format + ": %s\n", i, mPermutation[i]);
+            System.out.printf(format + ": %s\n", i + 1, mPermutation[i]);
         }
     }
 

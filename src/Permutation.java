@@ -96,7 +96,7 @@ public class Permutation {
         }
     }
 
-    public boolean hasRepetition() {
+    public boolean checkValidity() {
         for (int i = 0; i < mPermutation.length; i++) {
             for (int j = 0; j < mPermutation.length; j++) {
                 if (i == j) {
@@ -104,11 +104,11 @@ public class Permutation {
                 }
 
                 if (mPermutation[i].equals(mPermutation[j])) {
-                    return true;
+                    return false;
                 }
             }
         }
-        return false;
+        return true;
     }
 
 }

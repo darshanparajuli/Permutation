@@ -36,7 +36,7 @@ public class Permutation {
 
     public void run() {
         if (!mValid) {
-            System.err.println("word cannot have repeated characters!");
+            System.err.println("Error: word cannot have repeated characters!");
             return;
         }
 
@@ -84,6 +84,11 @@ public class Permutation {
     }
 
     public void print() {
+        if (!mValid) {
+            System.err.println("Error: invalid data!");
+            return;
+        }
+
         int maxLoops = mFactorialResult;
         int digitCount = 0;
         while (maxLoops != 0) {

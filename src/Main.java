@@ -8,6 +8,6 @@ public class Main {
         Permutation permutation = new Permutation(scanner.nextLine());
         permutation.run();
         permutation.print();
-        System.out.println("validity: " + permutation.checkValidity());
+        System.out.println("valid: " + permutation.checkValidity());
     }
 }

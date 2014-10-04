@@ -101,7 +101,7 @@ public class Permutation {
         }
     }
 
-    public boolean checkValidity() {
+    public boolean isResultValid() {
         if (!mValid) {
             return false;
         }

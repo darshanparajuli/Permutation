@@ -1,16 +1,12 @@
-import java.text.Collator;
-
 public class Permutation {
 
     private String[] mPermutation;
     private String mWord;
-    private Collator mCollator = Collator.getInstance();
     private int mFactorialResult;
     private boolean mValid;
 
     public Permutation(String word) {
         mWord = word;
-        mCollator.setStrength(Collator.PRIMARY);
         mValid = validate();
         if (mValid) {
             mFactorialResult = factorial(word.length());

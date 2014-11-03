@@ -71,6 +71,7 @@ public class Permutation {
                 }
 
                 mPermutation[j] = mPermutation[j] + mWord.charAt(k);
+                System.out.println(mPermutation[j]);
             }
         }
     }
